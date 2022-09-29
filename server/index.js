@@ -16,7 +16,7 @@ app.use('/messages', messageRouter)
 db.sequelize
   .sync()
   .then(() => {
-    app.listen(3001, () => {
+    app.listen(process.env.PORT || 3001, () => {
       console.log('server is up on 3001')
     })
   })
